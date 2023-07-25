@@ -6,7 +6,7 @@
 /*   By: antferna <antferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:37:10 by antferna          #+#    #+#             */
-/*   Updated: 2023/05/11 13:17:57 by antferna         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:54:47 by antferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strjoin_nl(char *s1, char *s2)
 			return (NULL);
 		s1[0] = '\0';
 	}
-	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	str = (char *)malloc(ft_strlen_nl(s1) + ft_strlen_nl(s2) + 1);
 	if (!str)
 		return (ft_free_nl(&s1));
 	i = -1;
@@ -74,7 +74,7 @@ static char	*ft_strdup_nl(char *s1)
 	int		i;
 	char	*s2;
 
-	s2 = (char *)malloc(ft_strlen(s1) + 1);
+	s2 = (char *)malloc(ft_strlen_nl(s1) + 1);
 	if (s2 == NULL)
 		return (NULL);
 	i = 0;
@@ -95,12 +95,12 @@ char	*ft_substr_nl(char *s, unsigned int start, size_t len)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	if (start > ft_strlen(s))
+	if (start > ft_strlen_nl(s))
 		str = ft_strdup_nl("");
 	else
 	{
-		if (start + len > ft_strlen(s))
-			len = ft_strlen(s) - start;
+		if (start + len > ft_strlen_nl(s))
+			len = ft_strlen_nl(s) - start;
 		str = (char *)malloc(len + 1);
 		if (str == NULL)
 			return (NULL);

@@ -6,7 +6,7 @@
 /*   By: antferna <antferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 14:14:15 by antferna          #+#    #+#             */
-/*   Updated: 2023/05/11 13:24:17 by antferna         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:27:08 by antferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <limits.h>
+# include <fcntl.h>
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 1
 # endif
 
 typedef struct s_list
